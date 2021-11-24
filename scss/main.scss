@@ -1,4 +1,7 @@
 $font-stack: 'M PLUS 2', sans-serif;
+$main-colour: plum;
+$task-colour: purple;
+$white-border: 2px solid #fff;
 
 * {
   box-sizing: border-box;
@@ -8,7 +11,7 @@ $font-stack: 'M PLUS 2', sans-serif;
 
 body {
   font-family: $font-stack;
-  background: plum;
+  background: $main-colour;
   color: #fff;
 }
 
@@ -37,17 +40,23 @@ h1 {
     font-size: 1.5rem;
     font-family: $font-stack;
     border: none;
-    background: purple;
+    border-bottom: $white-border;
+    background: $task-colour;
     color: #fff;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .add-btn {
     border: none;
+    border-bottom: $white-border;
     width: 20%;
     height: 100%;
     font-size: 1.5rem;
     font-family: $font-stack;
-    background: purple;
+    background: $task-colour;
     color: #fff;
   
     &:hover {
@@ -80,7 +89,7 @@ h1 {
       transition: background-color 0.1s;
 
       &:hover {
-        background: plum;
+        background: $main-colour;
         cursor: pointer;
       }
 
@@ -101,5 +110,33 @@ h1 {
 }
 
 .checked {
-  background: plum;
+  background: $main-colour;
+}
+
+.info {
+  margin-top: 1rem;
+  background: $task-colour;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  padding: 1.2rem 1rem;
+  border-bottom: 2px solid #fff;
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  button {
+    border: none;
+    background-color: $task-colour;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.1s;
+
+    &:hover {
+      color: #ddd;
+      cursor: pointer;
+    }
+  }
 }

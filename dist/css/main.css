@@ -30,10 +30,14 @@ h1 {
     font-size: 1.5rem;
     font-family: "M PLUS 2", sans-serif;
     border: none;
+    border-bottom: 2px solid #fff;
     background: purple;
     color: #fff; }
+    .input-container .task-input:focus {
+      outline: none; }
   .input-container .add-btn {
     border: none;
+    border-bottom: 2px solid #fff;
     width: 20%;
     height: 100%;
     font-size: 1.5rem;
@@ -76,3 +80,24 @@ h1 {
 
 .checked {
   background: plum; }
+
+.info {
+  margin-top: 1rem;
+  background: purple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  padding: 1.2rem 1rem;
+  border-bottom: 2px solid #fff; }
+  .info p {
+    font-size: 1.2rem; }
+  .info button {
+    border: none;
+    background-color: purple;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.1s; }
+    .info button:hover {
+      color: #ddd;
+      cursor: pointer; }
