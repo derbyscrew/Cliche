@@ -1,7 +1,4 @@
-$font-stack: 'M PLUS 2', sans-serif;
-$main-colour: plum;
-$task-colour: purple;
-$white-border: 2px solid #fff;
+@import "config";
 
 * {
   box-sizing: border-box;
@@ -12,12 +9,13 @@ $white-border: 2px solid #fff;
 body {
   font-family: $font-stack;
   background: $main-colour;
-  color: #fff;
+  color: $text-color;
 }
 
 .container {
   max-width: 50%;
   margin: auto;
+  margin-top: 3rem;
 }
 
 h1 {
@@ -34,7 +32,7 @@ h1 {
   align-items: center;
 
   .task-input {
-    width: 75%;
+    width: 100%;
     height: 100%;
     padding: 0 1rem;
     font-size: 1.5rem;
@@ -48,57 +46,35 @@ h1 {
       outline: none;
     }
   }
-
-  .add-btn {
-    border: none;
-    border-bottom: $white-border;
-    width: 20%;
-    height: 100%;
-    font-size: 1.5rem;
-    font-family: $font-stack;
-    background: $task-colour;
-    color: #fff;
-  
-    &:hover {
-      cursor: pointer;
-    }
-  }
 }
 
 .tasks-container {
-  background: purple;
+  background: $task-colour;
   width: 100%;
   margin-top: 1rem;
 
   .task {
-    border-bottom: #fff solid 2px;
+    border-bottom: $white-border;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 1rem;
 
-    button {
+    .check {
       height: 2.2rem;
       width: 2.2rem;
       border-radius: 50%;
       border: none;
-      background: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: background-color 0.1s;
 
       &:hover {
-        background: $main-colour;
         cursor: pointer;
       }
 
       i {
         color: #fff;
-
-        &:hover {
-          color: #fff;
-        }
       }
     }
    
@@ -109,9 +85,6 @@ h1 {
   }
 }
 
-.checked {
-  background: $main-colour;
-}
 
 .info {
   margin-top: 1rem;
@@ -121,7 +94,7 @@ h1 {
   align-items: center;
   height: 2rem;
   padding: 1.2rem 1rem;
-  border-bottom: 2px solid #fff;
+  border-bottom: $white-border;
 
   p {
     font-size: 1.2rem;
@@ -139,4 +112,8 @@ h1 {
       cursor: pointer;
     }
   }
+}
+
+.blue-background {
+  background-color: $main-colour;
 }

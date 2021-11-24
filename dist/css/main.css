@@ -4,13 +4,14 @@
   margin: 0; }
 
 body {
-  font-family: "M PLUS 2", sans-serif;
-  background: plum;
-  color: #fff; }
+  font-family: "Roboto", sans-serif;
+  background: #003a55;
+  color: #eee; }
 
 .container {
   max-width: 50%;
-  margin: auto; }
+  margin: auto;
+  margin-top: 3rem; }
 
 h1 {
   font-size: 4rem;
@@ -24,80 +25,64 @@ h1 {
   justify-content: space-between;
   align-items: center; }
   .input-container .task-input {
-    width: 75%;
+    width: 100%;
     height: 100%;
     padding: 0 1rem;
     font-size: 1.5rem;
-    font-family: "M PLUS 2", sans-serif;
+    font-family: "Roboto", sans-serif;
     border: none;
-    border-bottom: 2px solid #fff;
-    background: purple;
+    border-bottom: 1px solid #eee;
+    background: #005e88;
     color: #fff; }
     .input-container .task-input:focus {
       outline: none; }
-  .input-container .add-btn {
-    border: none;
-    border-bottom: 2px solid #fff;
-    width: 20%;
-    height: 100%;
-    font-size: 1.5rem;
-    font-family: "M PLUS 2", sans-serif;
-    background: purple;
-    color: #fff; }
-    .input-container .add-btn:hover {
-      cursor: pointer; }
 
 .tasks-container {
-  background: purple;
+  background: #005e88;
   width: 100%;
   margin-top: 1rem; }
   .tasks-container .task {
-    border-bottom: #fff solid 2px;
+    border-bottom: 1px solid #eee;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 1rem; }
-    .tasks-container .task button {
+    .tasks-container .task .check {
       height: 2.2rem;
       width: 2.2rem;
       border-radius: 50%;
       border: none;
-      background: #fff;
       display: flex;
       justify-content: center;
-      align-items: center;
-      transition: background-color 0.1s; }
-      .tasks-container .task button:hover {
-        background: plum;
+      align-items: center; }
+      .tasks-container .task .check:hover {
         cursor: pointer; }
-      .tasks-container .task button i {
+      .tasks-container .task .check i {
         color: #fff; }
-        .tasks-container .task button i:hover {
-          color: #fff; }
     .tasks-container .task p {
       margin-left: 1rem;
       font-size: 1.5rem; }
 
-.checked {
-  background: plum; }
-
 .info {
   margin-top: 1rem;
-  background: purple;
+  background: #005e88;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 2rem;
   padding: 1.2rem 1rem;
-  border-bottom: 2px solid #fff; }
+  border-bottom: 1px solid #eee; }
   .info p {
     font-size: 1.2rem; }
   .info button {
     border: none;
-    background-color: purple;
+    background-color: #005e88;
     color: #fff;
     font-size: 1.2rem;
     transition: color 0.1s; }
     .info button:hover {
       color: #ddd;
       cursor: pointer; }
+
+.blue-background {
+  background-color: #003a55; }

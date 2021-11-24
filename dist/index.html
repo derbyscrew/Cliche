@@ -5,9 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/982338bdd9.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="./css/main.css">
   <title>Cliche</title>
 </head>
@@ -15,32 +13,24 @@
 
   <div class="container">
 
+    <!-- Title -->
     <h1>Cliche <i class="fas fa-list"></i></h1>
 
+    <!-- Add Task Here -->
     <div class="input-container">
       <input type="text" class="task-input" placeholder="Enter task">
-      <button class="add-btn">Add Task</button>
     </div>
 
-    <section class="tasks-container">
-      <div class="task">
-        <button><i class="fas fa-check fa-2x"></i></button>
-        <p>Task 1</p>
-      </div>
-      <div class="task">
-        <button><i class="fas fa-check fa-2x"></i></button>
-        <p>Task 2</p>
-      </div>
-      <div class="task">
-        <button><i class="fas fa-check fa-2x"></i></button>
-        <p>Task 3</p>
-      </div>
-    </section>
+    <!-- Table Containing all the Tasks -->
+    <section class="tasks-container"></section> 
 
+    <!-- How many items left to complete  -->
     <footer class="info">
-      <p><span class="number-left">2</span> items left</p>
-      <button type="button">Clear Tasks</button>
+      <p><span class="number-left">0</span> Tasks Left</p>
+      <button type="button" class="clear-btn">Clear Tasks</button>
     </footer>
   </div>
+
+  <script src="./app.js"></script>
 </body>
 </html>
