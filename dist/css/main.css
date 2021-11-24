@@ -4,8 +4,75 @@
   margin: 0; }
 
 body {
-  font-family: 'M PLUS 2', sans-serif; }
+  font-family: "M PLUS 2", sans-serif;
+  background: plum;
+  color: #fff; }
 
 .container {
   max-width: 50%;
   margin: auto; }
+
+h1 {
+  font-size: 4rem;
+  margin-top: 1rem; }
+
+.input-container {
+  width: 100%;
+  height: 3rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .input-container .task-input {
+    width: 75%;
+    height: 100%;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    font-family: "M PLUS 2", sans-serif;
+    border: none;
+    background: purple;
+    color: #fff; }
+  .input-container .add-btn {
+    border: none;
+    width: 20%;
+    height: 100%;
+    font-size: 1.5rem;
+    font-family: "M PLUS 2", sans-serif;
+    background: purple;
+    color: #fff; }
+    .input-container .add-btn:hover {
+      cursor: pointer; }
+
+.tasks-container {
+  background: purple;
+  width: 100%;
+  margin-top: 1rem; }
+  .tasks-container .task {
+    border-bottom: #fff solid 2px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem; }
+    .tasks-container .task button {
+      height: 2.2rem;
+      width: 2.2rem;
+      border-radius: 50%;
+      border: none;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.1s; }
+      .tasks-container .task button:hover {
+        background: plum;
+        cursor: pointer; }
+      .tasks-container .task button i {
+        color: #fff; }
+        .tasks-container .task button i:hover {
+          color: #fff; }
+    .tasks-container .task p {
+      margin-left: 1rem;
+      font-size: 1.5rem; }
+
+.checked {
+  background: plum; }
