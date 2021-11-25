@@ -45,11 +45,13 @@ class UI {
   constructor() {
     this.input = getElement(".task-input");
     this.tasks = getElement(".tasks-container");
-    this.clearBtn = getElement(".clear-btn");
-    this.itemNumber = getElement(".number-left");
     this.taskList = [];
     this.counter = 0;
-
+    // Footer
+    this.clearBtn = getElement(".clear-btn");
+    this.itemNumber = getElement(".number-left");
+    // Bind
+    this.clearTasks = this.clearTasks.bind(this);
     // Event Listeners
     this.input.addEventListener("keypress", (e) => {
       if (e.charCode === 13 && this.input.value.length > 0) {
@@ -58,6 +60,8 @@ class UI {
         this.displayTasks(1);
       }
     });
+
+    this.clearBtn.addEventListener("click", this.clearTasks);
   }
 
   addTask(v) {
@@ -78,6 +82,16 @@ class UI {
       });
     }
   };
+
+  clearTasks() {
+    this.counter = 0;
+    this.itemNumber.textContent = this.counter;
+    while (this.taskList.length > 0) {
+      this.taskList.pop();
+    }
+    this.tasks.innerHTML = "";
+    console.log("Clicked");
+  }
 }
 
 
