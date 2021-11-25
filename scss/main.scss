@@ -23,6 +23,7 @@ h1 {
   margin-top: 1rem;
 }
 
+// Task Input
 .input-container {
   width: 100%;
   height: 3rem;
@@ -48,6 +49,7 @@ h1 {
   }
 }
 
+// Task container and each individual Task
 .tasks-container {
   background: $task-colour;
   width: 100%;
@@ -85,7 +87,7 @@ h1 {
   }
 }
 
-
+// Footer 
 .info {
   margin-top: 1rem;
   background: $task-colour;
@@ -114,6 +116,7 @@ h1 {
   }
 }
 
+// Togggle Class for Checkbox
 .blue-background {
   background-color: $main-colour;
 }

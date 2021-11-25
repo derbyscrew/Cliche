@@ -23,6 +23,7 @@ class Task {
     this.checked = false;
   }
 
+  // Check checbox background color and adjuts item number
   checkHandler() {
     if (!this.checked) {
       this.toggleBackgroundHandler();
@@ -35,6 +36,7 @@ class Task {
     }
   }
 
+  // Toggle the background colour of checkbox
   toggleBackgroundHandler() {
     this.checkBtn.classList.toggle("blue-background");
   }
@@ -49,6 +51,7 @@ class UI {
     this.counter = 0;
     // Footer
     this.clearBtn = getElement(".clear-btn");
+    this.tasksLeft = getElement(".tasks-left");
     this.itemNumber = getElement(".number-left");
     // Bind
     this.clearTasks = this.clearTasks.bind(this);
@@ -60,10 +63,10 @@ class UI {
         this.displayTasks(1);
       }
     });
-
     this.clearBtn.addEventListener("click", this.clearTasks);
   }
 
+  // Add new Task to the Task List Constructore
   addTask(v) {
     const task = document.createElement("div");
     task.classList.add("task");
@@ -72,10 +75,10 @@ class UI {
     this.taskList.push(newTask);
   }
 
-
+  // Add every task to the container
   displayTasks(c) {
     this.counter += c;
-    this.itemNumber.textContent = this.counter;
+    this.taskTextHandler(this.counter);
     if (this.taskList.length > 0) {
       this.taskList.forEach((task) => {
         this.tasks.appendChild(task.value);
@@ -83,16 +86,24 @@ class UI {
     }
   };
 
+  // Adjusts the text depending on how many tasks have been checked
+  taskTextHandler(c) {
+    if (c === 1) {
+      this.tasksLeft.innerHTML = `<span class="number-left">1</span> Task Left`;
+    } else {
+      this.tasksLeft.innerHTML = `<span class="number-left">${c}</span> Tasks Left`;
+    }
+  }
+
+  // Clears all the tasks from the list
   clearTasks() {
     this.counter = 0;
+    this.tasksLeft.innerHTML = `<span class="number-left">${this.counter}</span> Tasks`;
     this.itemNumber.textContent = this.counter;
-    while (this.taskList.length > 0) {
-      this.taskList.pop();
-    }
+    this.taskList = [];
     this.tasks.innerHTML = "";
-    console.log("Clicked");
+    console.log(this.taskList.length);
   }
 }
-
 
 const myApp = new UI();
