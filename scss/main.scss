@@ -58,7 +58,7 @@ h1 {
   .task {
     border-bottom: $white-border;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
 
@@ -83,6 +83,23 @@ h1 {
     p {
       margin-left: 1rem;
       font-size: 1.5rem;
+    }
+
+    .delete {
+      height: 2.2rem;
+      width: 2.2rem;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      background: $main-colour;
+
+      &:hover {
+        cursor: pointer;
+        color: $text-color;
+      }
     }
   }
 }
