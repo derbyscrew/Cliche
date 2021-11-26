@@ -85,6 +85,8 @@ class UI {
         this.input.value = "";
         this.displayMessage("Task Successfully Added");
         this.displayTasks(1, this.taskList);
+      } else {
+        this.displayMessage("Must be at least one character");
       }
     });
     this.clearBtn.addEventListener("click", this.clearTasks);
