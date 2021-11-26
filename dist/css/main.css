@@ -15,12 +15,29 @@ body {
 
 h1 {
   font-size: 4rem;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1.5rem; }
+
+.message-container {
+  margin-top: 1.5rem;
+  background: #005e88;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2rem;
+  padding: 1.2rem 1rem;
+  border: 1px solid #eee; }
+  .message-container p {
+    font-size: 1.2rem; }
+
+.hide {
+  display: none; }
 
 .input-container {
   width: 100%;
   height: 3rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -31,7 +48,7 @@ h1 {
     font-size: 1.5rem;
     font-family: "Roboto", sans-serif;
     border: none;
-    border-bottom: 1px solid #eee;
+    border: 1px solid #eee;
     background: #005e88;
     color: #fff; }
     .input-container .task-input:focus {
@@ -40,9 +57,9 @@ h1 {
 .tasks-container {
   background: #005e88;
   width: 100%;
-  margin-top: 1rem; }
+  margin-top: 1.5rem; }
   .tasks-container .task {
-    border-bottom: 1px solid #eee;
+    border: 1px solid #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,14 +94,14 @@ h1 {
         color: #eee; }
 
 .info {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   background: #005e88;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 2rem;
   padding: 1.2rem 1rem;
-  border-bottom: 1px solid #eee; }
+  border: 1px solid #eee; }
   .info p {
     font-size: 1.2rem; }
   .info button {

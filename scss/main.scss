@@ -21,13 +21,34 @@ body {
 h1 {
   font-size: 4rem;
   margin-top: 1rem;
+  border-bottom: $white-border;
+  margin-bottom: 1.5rem;
+}
+
+.message-container {
+  margin-top: 1.5rem;
+  background: $task-colour;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2rem;
+  padding: 1.2rem 1rem;
+  border: $white-border;
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.hide {
+  display: none;
 }
 
 // Task Input
 .input-container {
   width: 100%;
   height: 3rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +60,7 @@ h1 {
     font-size: 1.5rem;
     font-family: $font-stack;
     border: none;
-    border-bottom: $white-border;
+    border: $white-border;
     background: $task-colour;
     color: #fff;
 
@@ -53,10 +74,10 @@ h1 {
 .tasks-container {
   background: $task-colour;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 
   .task {
-    border-bottom: $white-border;
+    border: $white-border;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,14 +127,14 @@ h1 {
 
 // Footer 
 .info {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   background: $task-colour;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 2rem;
   padding: 1.2rem 1rem;
-  border-bottom: $white-border;
+  border: $white-border;
 
   p {
     font-size: 1.2rem;
