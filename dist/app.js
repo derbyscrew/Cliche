@@ -1,6 +1,5 @@
 "use strict";
 
-
 // Checks if an element exists within the DOM
 const getElement = (selection) => {
   const element = document.querySelector(selection);
@@ -39,12 +38,16 @@ class Task {
     }
   }
 
+  // Remove Task from Table 
   deleteHandler() {
+    myApp.displayMessage("Task Successfully Removed");
+    myApp.input.value = "";
     for (let i = 0; i <= myApp.taskList.length; i++) {
       if (myApp.taskList[i] === this) {
         if (i > -1) {
           this.value.parentNode.removeChild(this.value);
           myApp.taskList.splice(i, 1);
+          // Adjust the count accordingly
           if (myApp.counter > 0) {
             myApp.displayTasks(-1, myApp.taskList);
           } else {
@@ -64,6 +67,7 @@ class Task {
 
 class UI {
   constructor() {
+    this.messageContainer = getElement(".message-container");
     this.input = getElement(".task-input");
     this.tasks = getElement(".tasks-container");
     this.taskList = [];
@@ -79,6 +83,7 @@ class UI {
       if (e.charCode === 13 && this.input.value.length > 0) {
         this.addTask(this.input.value);
         this.input.value = "";
+        this.displayMessage("Task Successfully Added");
         this.displayTasks(1, this.taskList);
       }
     });
@@ -110,20 +115,18 @@ class UI {
     }
   };
 
+  displayMessage(message) {
+    this.messageContainer.classList.remove("hide");
+    this.messageContainer.innerHTML = `<p>${message}</p>`;
+    setTimeout(() => this.messageContainer.classList.add("hide"), 1500);
+  }
+
   // Adjusts the text depending on how many tasks have been checked
   taskTextHandler(c) {
     if (c === 1) {
       this.tasksLeft.innerHTML = `<span class="number-left">1</span> Task Left`;
     } else {
       this.tasksLeft.innerHTML = `<span class="number-left">${c}</span> Tasks Left`;
-    }
-  }
-
-  deleteItem(item) {
-    if (this.taskList.length > 0) {
-      for (let i = 0; i < this.taskList; i++) {
-        console.log(this.taskList[i]);
-      }
     }
   }
 
